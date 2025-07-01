@@ -1,0 +1,129 @@
+{
+  "name": "L",
+  "scopeName": "source.l",
+  "fileTypes": [
+    "L"
+  ],
+  "patterns": [
+    {
+      "include": "#comment"
+    },
+    {
+      "include": "#string"
+    },
+    {
+      "include": "#keyword"
+    },
+    {
+      "include": "#operator"
+    },
+    {
+      "include": "#number"
+    },
+    {
+      "include": "#punctuation"
+    },
+    {
+      "include": "#identifier"
+    }
+  ],
+  "repository": {
+    "comment": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.l",
+          "match": "//.*"
+        },
+        {
+          "name": "comment.block.l",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "string": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.l",
+          "match": "\"(?:\\\\.|[^\\\\\"])*\""
+        },
+        {
+          "name": "string.quoted.single.riddle",
+          "match": "'(?:\\\\.|[^\\\\'])*'"
+        }
+      ]
+    },
+    "keyword": {
+      "patterns": [
+        {
+          "name": "keyword.control.l",
+          "match": "\\b(?:if|else|while|do|for|return|break|continue|try|catch|finally)\\b"
+        },
+        {
+          "name": "storage.modifier.l",
+          "match": "\\b(?:public|protected|private|const|readonly|final|static|override|extern|abstract|default|volatile)\\b"
+        },
+        {
+          "name": "storage.type.l",
+          "match": "\\b(?:byte|short|int|long|ubyte|ushort|uint|ulong|float|double|boolean|auto|class|interface|enum|record|var|val|method|constructor|destructor|import|package)\\b"
+        },
+        {
+          "name": "constant.language.l",
+          "match": "\\b(?:null|nullptr|true|false)\\b"
+        },
+        {
+          "name": "keyword.other.l",
+          "match": "\\b(?:this|super|native)\\b"
+        }
+      ]
+    },
+    "operator": {
+      "patterns": [
+        {
+          "name": "keyword.operator.l",
+          "match": "\\b(?:new|delete|typeof|in|instanceof)\\b"
+        }
+      ]
+    },
+    "number": {
+      "patterns": [
+        {
+          "name": "constant.numeric.integer.decimal.l",
+          "match": "\\b\\d+\\b"
+        },
+        {
+          "name": "constant.numeric.integer.binary.l",
+          "match": "\\b0b[01]+\\b"
+        },
+        {
+          "name": "constant.numeric.integer.octal.l",
+          "match": "\\b0[0-7]+\\b"
+        },
+        {
+          "name": "constant.numeric.integer.hex.l",
+          "match": "\\b0x[0-9A-Fa-f]+\\b"
+        },
+        {
+          "name": "constant.numeric.float.l",
+          "match": "\\b\\d+\\.\\d+\\b"
+        }
+      ]
+    },
+    "punctuation": {
+      "patterns": [
+        {
+          "name": "punctuation.separator.l",
+          "match": "[;:,\\.\\(\\)\\{\\}\\[\\]]"
+        }
+      ]
+    },
+    "identifier": {
+      "patterns": [
+        {
+          "name": "variable.other.l",
+          "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b"
+        }
+      ]
+    }
+  }
+}

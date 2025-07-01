@@ -1,0 +1,8 @@
+{
+  "editor.semanticTokenColorCustomizations": {
+    "rules": {
+      "keyword.control.l": "#FF0000",
+      "string.quoted.double.l": "#008000"
+    }
+  }
+}
