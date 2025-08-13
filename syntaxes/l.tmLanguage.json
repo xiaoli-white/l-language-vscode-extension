@@ -57,15 +57,15 @@
       "patterns": [
         {
           "name": "keyword.control.l",
-          "match": "\\b(?:if|else|while|do|for|return|break|continue|try|catch|finally)\\b"
+          "match": "\\b(?:if|else|while|do|for|loop|return|break|continue|try|catch|finally)\\b"
         },
         {
           "name": "storage.modifier.l",
-          "match": "\\b(?:public|protected|private|const|readonly|final|static|override|extern|abstract|default|volatile)\\b"
+          "match": "\\b(?:public|protected|private|const|readonly|final|static|override|extern|abstract|default|volatile|synchronized)\\b"
         },
         {
           "name": "storage.type.l",
-          "match": "\\b(?:byte|short|int|long|ubyte|ushort|uint|ulong|float|double|boolean|auto|class|interface|enum|record|var|val|method|constructor|destructor|import|package)\\b"
+          "match": "\\b(?:byte|short|int|long|ubyte|ushort|uint|ulong|float|double|boolean|auto|void|class|interface|enum|record|var|val|method|constructor|destructor|import|package)\\b"
         },
         {
           "name": "constant.language.l",
